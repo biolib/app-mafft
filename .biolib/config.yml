@@ -12,9 +12,92 @@ modules:
             - COPY / /home/biolib/
 arguments:
     -
-        default_value: 'sample.fasta'
-        description: FASTA
+        default_value: sample.fasta
+        description: Input protein or DNA sequence (FASTA)
         key: ''
         key_value_separator: ' '
         required: true
         type: file
+    -
+        default_value: ''
+        description: 'Input sequence type (default: auto)'
+        key: ''
+        key_value_separator: ' '
+        required: false
+        type: dropdown
+        options:
+            Nucleotide: '--nuc'
+            Amino Acid: '--amino'
+    -
+        default_value: 6mer (default)
+        description: Algorithm
+        key: ''
+        key_value_separator: ' '
+        required: false
+        type: dropdown
+        options:
+            auto: '--auto'
+            6mer (default): '--6merpair'
+            Needleman-Wunsch (global): '--globalpair'
+            Smith-Waterman (local): '--localpair'
+    -
+        default_value: ''
+        description: Output as clustal (default = fasta)
+        key: ''
+        key_value_separator: ' '
+        required: false
+        type: toggle
+        options:
+            'off': ''
+            'on': '--clustalout'
+    -
+        default_value: ''
+        description: Reorder output based on alignment
+        key: ''
+        key_value_separator: ' '
+        required: false
+        type: toggle
+        options:
+            'off': ''
+            'on': '--reorder'
+    -
+        default_value: ''
+        description: Output guide tree (to the input.tree file)
+        key: ''
+        key_value_separator: ' '
+        required: false
+        type: toggle
+        options:
+            'off': ''
+            'on': '--treeout'
+    -
+        default_value: ''
+        description: Maximum iterations
+        key: '--maxiterate'
+        key_value_separator: ' '
+        required: false
+        type: number
+    -
+        default_value: '--fft'
+        description: Use FFT approximation
+        key: ''
+        key_value_separator: ' '
+        required: false
+        type: toggle
+        options:
+            'off': '--nofft'
+            'on': '--fft'
+    -
+        default_value: ''
+        description: >-
+            How many times guide tree is built in the progressive stage (only
+            for 6mer algorithm)
+        key: ''
+        key_value_separator: ' '
+        required: false
+        type: dropdown
+        options:
+            '1': '--retree 1'
+            '2': '--retree 2'
+            '5': '--retree 5'
+            '10': '--retree 10'
