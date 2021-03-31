@@ -1,0 +1,14 @@
+biolib_version: 2
+modules:
+    main:
+        image: 'local-docker://app-mafft:latest'
+        command: /bin/bash app.sh
+        working_directory: /home/biolib/
+        input_files:
+            - COPY / /home/biolib/
+        output_files:
+            - COPY /home/biolib/ /
+        source_files:
+            - COPY / /home/biolib/
+arguments:
+
