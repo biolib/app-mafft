@@ -12,13 +12,6 @@ modules:
             - COPY / /home/biolib/
 arguments:
     -
-        default_value: sample.fasta
-        description: Input protein or DNA sequence (FASTA)
-        key: ''
-        key_value_separator: ' '
-        required: true
-        type: file
-    -
         default_value: ''
         description: 'Input sequence type (default: auto)'
         key: ''
@@ -101,3 +94,17 @@ arguments:
             '2': '--retree 2'
             '5': '--retree 5'
             '10': '--retree 10'
+    -
+        default_value: sample.fasta
+        description: Input protein or DNA sequence (FASTA)
+        key: ''
+        key_value_separator: ' '
+        required: true
+        type: file
+    - 
+        default_value: output.fasta
+        description: Output file
+        key: ' > '
+        key_value_separator: ' '
+        required: true
+        type: file 
