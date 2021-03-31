@@ -11,4 +11,10 @@ modules:
         source_files:
             - COPY / /home/biolib/
 arguments:
-
+    -
+        default_value: 'sample.fasta'
+        description: FASTA
+        key: ''
+        key_value_separator: ' '
+        required: true
+        type: file
