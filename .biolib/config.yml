@@ -22,7 +22,7 @@ arguments:
             Nucleotide: '--nuc'
             Amino Acid: '--amino'
     -
-        default_value: 6mer (default)
+        default_value: '--6merpair'
         description: Algorithm
         key: ''
         key_value_separator: ' '
@@ -101,4 +101,3 @@ arguments:
         key_value_separator: ' '
         required: true
         type: file
-output_type: text
