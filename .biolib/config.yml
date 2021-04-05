@@ -101,10 +101,4 @@ arguments:
         key_value_separator: ' '
         required: true
         type: file
-    - 
-        default_value: output.fasta
-        description: Output file
-        key: ' > '
-        key_value_separator: ' '
-        required: true
-        type: file 
+output_type: text
