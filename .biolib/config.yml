@@ -23,7 +23,7 @@ arguments:
             Amino Acid: '--amino'
     -
         default_value: '--6merpair'
-        description: Algorithm
+        description: Algorithm/Preset
         key: ''
         key_value_separator: ' '
         required: false
@@ -33,6 +33,13 @@ arguments:
             6mer (default): '--6merpair'
             Needleman-Wunsch (global): '--globalpair'
             Smith-Waterman (local): '--localpair'
+            linsi (preset): 'linsi'
+            ginsi (preset): 'ginsi'
+            einsi (preset): 'einsi'
+            fftnsi (preset): 'fftnsi'
+            fftns (preset): 'fftns'
+            nwns (preset): 'nwns'
+            nwnsi (preset): 'nwnsi'
     -
         default_value: ''
         description: Output as clustal (default = fasta)
