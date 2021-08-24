@@ -95,7 +95,7 @@ arguments:
             '5': '--retree 5'
             '10': '--retree 10'
     -
-        default_value: sample.fasta
+        default_value: "protein_example.fsa"
         description: Input protein or DNA sequence (FASTA)
         key: ''
         key_value_separator: ' '
